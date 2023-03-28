@@ -9,4 +9,15 @@ def removeElement(nums, val) -> int:
             if elem  == 999999999 :
                 return nums[0:pos]
 
+def remove_element(nums, val):
+    k = 0  # initialize the count of elements not equal to val
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]  # move the element to the front
+            k += 1  # increment the count
+    return k
+
 print(removeElement([2,3,2,3],2))
+
+nums = [2,3,2,3]
+print(nums[0:remove_element(nums,2)])
