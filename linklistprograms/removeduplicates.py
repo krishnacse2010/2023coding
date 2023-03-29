@@ -20,11 +20,24 @@ class Solution:
                 
         return head
 
+    def deleteDuplicates_betterapproach(self, head: Optional[LinkedList]) -> Optional[LinkedList]:
+        t1 = t2 = head
+        t2 = t1.next
+
+        while t2:
+            if t2.val == t1.val:
+                t1.next = t2.next
+                t2= t2.next
+            else:
+                t1=t1.next
+                t2=t2.next
+                
+        return head
 l1=LinkedList()
-list1 = [1,1,2,2,3,4]
+list1 = [1,1,2,3,3,4,5]
 for elem in list1:
     l1.append(elem)
 
 s=Solution()
-s.deleteDuplicates(l1.head)
-print(l1.print_list())
+s.deleteDuplicates_betterapproach(l1.head)
+l1.print_list()

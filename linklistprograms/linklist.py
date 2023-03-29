@@ -15,14 +15,16 @@ class LinkedList:
             self.head = new_node
             return
 
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
+        temp = self.head
+        
+        while temp.next:
+            temp = temp.next
 
-        last_node.next = new_node
+        temp.next = new_node
 
     def print_list(self):
         current_node = self.head
         while current_node:
             print(current_node.val)
             current_node = current_node.next
+            return

@@ -17,7 +17,7 @@ def remove_element(nums, val):
             k += 1  # increment the count
     return k
 
-print(removeElement([2,3,2,3],2))
+print(removeElement([2,3,2,3,1,4,2,2,4,5,2],5)) ;#
 
 nums = [2,3,2,3]
 print(nums[0:remove_element(nums,2)])
